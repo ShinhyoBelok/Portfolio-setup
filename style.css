@@ -2,6 +2,7 @@
   font-family: 'Poppins';
   src: url(Poppins/Poppins-Bold.ttf);
 }
+
 @font-face {
   font-family: 'Poppins-normal';
   src: url(Poppins/Poppins-Regular.ttf);
@@ -11,8 +12,8 @@
   position: absolute;
   width: 375px;
   height: 44px;
-  left: calc(50% - 375px/2);
-  top: 0px;
+  left: calc(50% - 375px / 2);
+  top: 0;
 }
 
 .time {
@@ -33,7 +34,7 @@
 
 .header {
   position: absolute;
-  left: calc(50% - 375px/2);
+  left: calc(50% - 375px / 2);
   top: 44px;
   width: 375px;
   height: 48px;
@@ -47,12 +48,12 @@
   width: 100px;
   height: 40px;
   left: 12px;
-  top: calc(50% - 40px/2);
+  top: calc(50% - 40px / 2);
 }
 
 .bar {
   position: absolute;
-  top: calc(50% - 24px/2);
+  top: calc(50% - 24px / 2);
   right: 32px;
   cursor: pointer;
 }
@@ -61,7 +62,7 @@
   width: 375px;
   height: 604px;
   position: absolute;
-  left: calc(50% - 375px/2);
+  left: calc(50% - 375px / 2);
   top: 92px;
   background-image: url("img/header-shapes mobile@2x.svg");
   background-repeat: no-repeat;
@@ -73,49 +74,48 @@
 .headline {
   width: 327px;
   height: 150px;
-  font-family: 'Poppins';
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 40px;
   line-height: 52px;
   display: flex;
   align-items: center;
-  color: #172B4D;
+  color: #172b4d;
   order: 0;
   flex-grow: 0;
   margin-top: 30.4%;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .description {
   width: 327px;
   height: 146px;
   margin-top: 12px;
-  font-family: 'Poppins-normal';
+  font-family: 'Poppins-normal', Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   color: #344563;
   flex: none;
   flex-grow: 0;
-
 }
 
 .social {
   width: 118px;
   height: 24px;
-  font-family: 'Poppins-normal';
+  font-family: 'Poppins-normal', Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  color: #7F8CFF;
+  color: #7f8cff;
   flex: none;
   order: 0;
   flex-grow: 0;
-  margin-top: 0px;
+  margin-top: 0;
   margin-left: 24px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   align-self: flex-start;
 }
 
@@ -127,7 +127,7 @@
   margin-top: 12px;
   list-style: none;
   display: flex;
-  padding: 0px;
+  padding: 0;
   justify-content: space-between;
   align-self: start;
 }
