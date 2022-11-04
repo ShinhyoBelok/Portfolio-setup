@@ -306,18 +306,18 @@ ul {
   border: solid #5e6c84;
 }
 
+#about {
+  background-image: none;
+  height: 70vh;
+  padding: 0;
+}
+
 #aboutContainer {
   height: unset;
   border-bottom-left-radius: 0;
   border-top-right-radius: 4rem;
   box-sizing: border-box;
   padding: 0 6.4%;
-}
-
-#about {
-  background-image: none;
-  height: 70vh;
-  padding: 0;
 }
 
 .languages {
