@@ -475,11 +475,10 @@ ul {
 
   .project {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2fr 1fr 1fr 1fr 4fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 1fr;
     grid-column-gap: 46px;
     grid-row-gap: 0;
     align-items: center;
-    padding: 2rem;
   }
 
   .snap {
@@ -532,6 +531,8 @@ ul {
     flex-direction: column;
     font-weight: 500;
     width: 20%;
+    min-width: fit-content;
+    max-width: 105px;
   }
 
   .listOfLanguages p {
