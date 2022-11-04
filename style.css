@@ -122,6 +122,29 @@ h4 {
   height: 100%;
 }
 
+.content h1 {
+  animation-name: title-intro;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes title-intro {
+  0% {transform: translate(0, -1000px);}
+}
+
+.content p {
+  animation-name: paragraph-intro;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+  transform: translate(-1500px, 0)
+}
+
+@keyframes paragraph-intro {
+  0% {transform: translate(-1500px, 0);}
+  100%{transform: translate(0, 0)}
+}
+
 .socialIcon {
   display: flex;
   align-items: center;
@@ -129,6 +152,24 @@ h4 {
   padding: 0;
   margin: 0;
   gap: 20px;
+  animation-name: opacity;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 4.5s;
+  opacity: 0%;
+}
+
+.content h3 {
+  animation-name: opacity;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 4.5s;
+  opacity: 0%;
+}
+
+@keyframes opacity {
+  0% {opacity: 0%;}
+  100% {opacity: 100%;}
 }
 
 .socialIcon li {
