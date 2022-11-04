@@ -129,7 +129,9 @@ h4 {
 }
 
 @keyframes title-intro {
-  0% {transform: translate(0, -1000px);}
+  0% {
+    transform: translate(0, -1000px);
+  }
 }
 
 .content p {
@@ -137,12 +139,17 @@ h4 {
   animation-duration: 2s;
   animation-fill-mode: forwards;
   animation-delay: 2s;
-  transform: translate(-1500px, 0)
+  transform: translate(-1500px, 0);
 }
 
 @keyframes paragraph-intro {
-  0% {transform: translate(-1500px, 0);}
-  100%{transform: translate(0, 0)}
+  0% {
+    transform: translate(-1500px, 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 .socialIcon {
@@ -168,16 +175,13 @@ h4 {
 }
 
 @keyframes opacity {
-  0% {opacity: 0%;}
-  100% {opacity: 100%;}
-}
+  0% {
+    opacity: 0%;
+  }
 
-.socialIcon li {
-  transition: transform 0.3s;
-}
-
-.socialIcon li:hover {
-  transform: scale(1.5);
+  100% {
+    opacity: 100%;
+  }
 }
 
 #work {
@@ -242,6 +246,25 @@ ul {
   padding: 4px 12px;
 }
 
+.listOfLanguages li {
+  display: flex;
+  width: 90%;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 9px 12px;
+  gap: 5%;
+  background-color: #f7f7f9;
+  border-radius: 1rem;
+}
+
+.socialIcon li {
+  transition: transform 0.3s;
+}
+
+.socialIcon li:hover {
+  transform: scale(1.5);
+}
+
 .button {
   width: fit-content;
   height: fit-content;
@@ -257,7 +280,7 @@ ul {
   letter-spacing: 0.03em;
   color: #396df2;
   cursor: pointer;
-  transition: transform 2s ease-out, color 0.5s;
+  transition: transform 1s ease-out, color 0.5s;
   margin-top: 12px;
 }
 
@@ -267,7 +290,7 @@ ul {
 }
 
 .button:hover {
-  transform: rotateY(360deg);
+  transform: rotateY(180deg);
   color: #fff;
   background: #6070ff;
 }
@@ -323,17 +346,6 @@ ul {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-}
-
-.listOfLanguages li {
-  display: flex;
-  width: 90%;
-  align-items: center;
-  box-sizing: border-box;
-  padding: 9px 12px;
-  gap: 5%;
-  background-color: #f7f7f9;
-  border-radius: 1rem;
 }
 
 #open {
@@ -532,7 +544,7 @@ ul {
     align-self: center;
   }
 
-  .languages{
+  .languages {
     justify-content: center;
   }
 }
