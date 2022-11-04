@@ -10,12 +10,6 @@
 
 /* GENERAL STYLING */
 
-body {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
-}
-
 main {
   display: flex;
   flex-direction: column;
@@ -475,6 +469,7 @@ ul {
   }
 
   .listOfLanguages {
+    margin-left: 5%;
     flex-direction: row;
     justify-content: start;
   }
@@ -494,5 +489,9 @@ ul {
 
   .contact button {
     align-self: center;
+  }
+
+  .languages{
+    justify-content: center;
   }
 }
