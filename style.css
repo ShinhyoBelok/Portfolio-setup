@@ -8,7 +8,9 @@
   src: url(Poppins/Poppins-Regular.ttf);
 }
 
-body {
+/* GENERAL STYLING */
+
+main {
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -19,7 +21,6 @@ body {
 h1 {
   margin: 0;
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
-  font-style: normal;
   font-weight: 700;
   font-size: 40px;
   line-height: 52px;
@@ -63,6 +64,8 @@ h4 {
   margin: 0;
 }
 
+/* END OF GENERAL STYLING */
+
 .presentation {
   display: flex;
   flex-direction: column;
@@ -70,6 +73,11 @@ h4 {
   height: 100vh;
   background-color: #fff;
   border-bottom-left-radius: 4rem;
+  background-image: url("img/header-shapes mobile@2x.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100vw;
+  background-position-y: 48px;
 }
 
 .header {
@@ -90,11 +98,21 @@ h4 {
 }
 
 .menu {
+  display: flex;
+  align-items: center;
   padding-right: 8.53%;
+}
+
+.menu p {
+  display: none;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .content {
   display: flex;
+  max-width: 1104px;
   flex-direction: column;
   justify-content: center;
   gap: 12px;
@@ -102,10 +120,36 @@ h4 {
   padding: 0 6.4%;
   width: 100%;
   height: 100%;
-  background-image: url("img/header-shapes mobile@2x.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
+}
+
+.content h1 {
+  animation-name: title-intro;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes title-intro {
+  0% {
+    transform: translate(0, -1000px);
+  }
+}
+
+.content p {
+  animation-name: paragraph-intro;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+  transform: translate(-1500px, 0);
+}
+
+@keyframes paragraph-intro {
+  0% {
+    transform: translate(-1500px, 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 .socialIcon {
@@ -115,6 +159,29 @@ h4 {
   padding: 0;
   margin: 0;
   gap: 20px;
+  animation-name: opacity;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 4.5s;
+  opacity: 0%;
+}
+
+.content h3 {
+  animation-name: opacity;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 4.5s;
+  opacity: 0%;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
 }
 
 #work {
@@ -138,6 +205,11 @@ h4 {
   justify-self: center;
   align-self: center;
   width: 100%;
+  transition: transform 2s;
+}
+
+.snap:hover {
+  transform: scale(1.1);
 }
 
 ul {
@@ -155,6 +227,11 @@ ul {
   line-height: 16px;
   color: #344563;
   gap: 12px;
+  align-self: center;
+}
+
+.lightgray {
+  color: #6b778c;
 }
 
 .programmingLanguages li {
@@ -169,8 +246,28 @@ ul {
   padding: 4px 12px;
 }
 
+.listOfLanguages li {
+  display: flex;
+  width: 90%;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 9px 12px;
+  gap: 5%;
+  background-color: #f7f7f9;
+  border-radius: 1rem;
+}
+
+.socialIcon li {
+  transition: transform 0.3s;
+}
+
+.socialIcon li:hover {
+  transform: scale(1.5);
+}
+
 .button {
   width: fit-content;
+  height: fit-content;
   box-sizing: border-box;
   padding: 12px;
   border: 1px solid #6070ff;
@@ -183,7 +280,7 @@ ul {
   letter-spacing: 0.03em;
   color: #396df2;
   cursor: pointer;
-  transition: 0.2s linear;
+  transition: transform 1s ease-out, color 0.5s;
   margin-top: 12px;
 }
 
@@ -193,6 +290,7 @@ ul {
 }
 
 .button:hover {
+  transform: rotateY(180deg);
   color: #fff;
   background: #6070ff;
 }
@@ -208,18 +306,18 @@ ul {
   border: solid #5e6c84;
 }
 
+#about {
+  background-image: none;
+  height: 70vh;
+  padding: 0;
+}
+
 #aboutContainer {
   height: unset;
   border-bottom-left-radius: 0;
   border-top-right-radius: 4rem;
   box-sizing: border-box;
   padding: 0 6.4%;
-}
-
-#about {
-  background-image: none;
-  height: 70vh;
-  padding: 0;
 }
 
 .languages {
@@ -250,22 +348,12 @@ ul {
   justify-content: space-between;
 }
 
-.listOfLanguages li {
-  display: flex;
-  width: 90%;
-  align-items: center;
-  box-sizing: border-box;
-  padding: 9px 12px;
-  gap: 5%;
-  background-color: #f7f7f9;
-  border-radius: 1rem;
-}
-
 #open {
   border: 0;
 }
 
 .contact {
+  margin: auto;
   height: 100vh;
   width: 100vw;
   background-color: #6070ff;
@@ -297,6 +385,7 @@ ul {
   font-weight: 400;
   text-align: center;
   color: #fff;
+  max-width: 569px;
 }
 
 .contact form {
@@ -304,6 +393,7 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 18px;
+  max-width: 447px;
 }
 
 .single-line-input {
@@ -325,6 +415,11 @@ ul {
   font-size: 17px;
   line-height: 20px;
   color: #172b4d;
+  transition: transform 1s;
+}
+
+.single-line-input:hover::placeholder {
+  transform: translate(42px, 0);
 }
 
 .comment {
@@ -344,4 +439,113 @@ ul {
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
+  transition: transform 1s;
+}
+
+.comment:hover::placeholder {
+  transform: translate(42px, 0);
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 48px;
+    line-height: 60px;
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .menu p {
+    display: inline;
+  }
+
+  .menu ul {
+    gap: 32px;
+  }
+
+  .menu img {
+    display: none;
+  }
+
+  .presentation {
+    background-image: url("img/desktop presentation img.svg");
+  }
+
+  .project {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 1fr;
+    grid-column-gap: 46px;
+    grid-row-gap: 0;
+    align-items: center;
+  }
+
+  .snap {
+    grid-row: 1 / 6;
+    width: 100%;
+    height: 100%;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 52px;
+    align-self: end;
+  }
+
+  .canopy {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .button {
+    align-self: start;
+  }
+
+  .reverseGrid {
+    grid-column: 2 / 3;
+  }
+
+  #aboutContainer {
+    background-image: none;
+    flex-direction: row;
+    padding: 9.6%;
+  }
+
+  .contact {
+    background-image: url("img/contact form background desktop.svg");
+    background-position: center;
+    background-position-y: 25px;
+  }
+
+  .listOfLanguages {
+    margin-left: 5%;
+    flex-direction: row;
+    justify-content: start;
+  }
+
+  .listOfLanguages li {
+    align-items: start;
+    flex-direction: column;
+    font-weight: 500;
+    width: 20%;
+    min-width: fit-content;
+    max-width: 105px;
+  }
+
+  .listOfLanguages p {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .contact button {
+    align-self: center;
+  }
+
+  .languages {
+    justify-content: center;
+  }
 }
