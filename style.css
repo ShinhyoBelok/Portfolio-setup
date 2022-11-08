@@ -371,11 +371,12 @@ ul {
   gap: 12px;
 }
 
-.contact h1 {
+.contact h2 {
   font-size: 40px;
   line-height: 55px;
   text-align: center;
   margin: 0;
+  align-self: unset;
   color: #fff;
 }
 
@@ -446,6 +447,16 @@ ul {
   transform: translate(42px, 0);
 }
 
+.Title {
+  margin: 0;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  align-self: unset;
+  color: #172b4d;
+}
+
 @media (min-width: 768px) {
   h1 {
     font-size: 48px;
@@ -492,6 +503,11 @@ ul {
     font-size: 40px;
     line-height: 52px;
     align-self: end;
+  }
+
+  .contact h2 {
+    font-size: 48px;
+    line-height: 60px;
   }
 
   .canopy {
@@ -547,5 +563,10 @@ ul {
 
   .languages {
     justify-content: center;
+  }
+
+  .Title {
+    font-size: 48px;
+    line-height: 60px;
   }
 }
