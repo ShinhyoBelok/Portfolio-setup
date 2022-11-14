@@ -85,11 +85,13 @@ h4 {
 
 .header {
   box-sizing: border-box;
+  position: fixed;
   display: flex;
   height: 48px;
   width: 100%;
   align-items: center;
   justify-content: space-between;
+  background-color: #fff;
 }
 
 .header a {
@@ -119,9 +121,8 @@ h4 {
 
 .menu {
   display: flex;
-  /* align-items: center; */
   padding-right: 8.53%;
-  position: relative; 
+  position: relative;
 }
 
 .presentation .menu.active {
@@ -132,12 +133,27 @@ h4 {
   flex-direction: column;
   height: 100vh;
   width: 100%;
-  background-color: #6070FF;
+  background-color: #6070ff;
   z-index: 1;
   opacity: 0.9;
 }
 
-.menu.active ul  {
+ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 8px;
+}
+
+.menu ul {
+  display: none;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.menu.active ul {
   display: flex;
   list-style: none;
   flex-direction: column;
@@ -147,7 +163,23 @@ h4 {
   padding-left: 28px;
   padding-top: 90px;
   gap: 8px;
+}
 
+.content p {
+  animation-name: paragraph-intro;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+  transform: translate(-1500px, 0);
+}
+
+.contact p {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 400;
+  text-align: center;
+  color: #fff;
+  max-width: 569px;
 }
 
 .menu.active ul p {
@@ -157,14 +189,6 @@ h4 {
   line-height: 44px;
   display: flex;
   align-items: center;
-
-}
-
-.menu ul {
-  display: none;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 20px;
 }
 
 .content {
@@ -189,14 +213,6 @@ h4 {
   0% {
     transform: translate(0, -1000px);
   }
-}
-
-.content p {
-  animation-name: paragraph-intro;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-  animation-delay: 2s;
-  transform: translate(-1500px, 0);
 }
 
 @keyframes paragraph-intro {
@@ -267,14 +283,6 @@ h4 {
 
 .snap:hover {
   transform: scale(1.1);
-}
-
-ul {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  gap: 8px;
 }
 
 .canopy {
@@ -437,15 +445,6 @@ ul {
   color: #fff;
 }
 
-.contact p {
-  font-size: 20px;
-  line-height: 28px;
-  font-weight: 400;
-  text-align: center;
-  color: #fff;
-  max-width: 569px;
-}
-
 .contact form {
   width: 100%;
   display: flex;
@@ -527,9 +526,6 @@ ul {
 
   .menu ul {
     display: flex;
-  }
-
-  .menu ul {
     gap: 32px;
   }
 
