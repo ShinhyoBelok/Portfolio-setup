@@ -100,8 +100,8 @@ h4 {
   cursor: pointer;
 }
 
-.close {
-  /* display: none; */
+.close-menu {
+  display: none;
   position: fixed;
   top: 20px;
   right: 20px;
@@ -109,9 +109,13 @@ h4 {
   width: 40px;
 }
 
-/* #barClose {
-  di
-} */
+.show {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
 
 .menu {
   display: flex;
@@ -120,7 +124,7 @@ h4 {
   position: relative; 
 }
 
-.presentation .active {
+.presentation .menu.active {
   display: flex;
   position: fixed;
   top: 0;
@@ -133,7 +137,7 @@ h4 {
   opacity: 0.9;
 }
 
-.active ul  {
+.menu.active ul  {
   display: flex;
   list-style: none;
   flex-direction: column;
@@ -146,7 +150,7 @@ h4 {
 
 }
 
-.active ul p {
+.menu.active ul p {
   color: #fff;
   font-weight: 600;
   font-size: 32px;
@@ -156,8 +160,8 @@ h4 {
 
 }
 
-.menu p {
-  /* display: none; */
+.menu ul {
+  display: none;
   font-weight: 500;
   font-size: 15px;
   line-height: 20px;
@@ -521,8 +525,8 @@ ul {
     line-height: 28px;
   }
 
-  .menu p {
-    display: inline;
+  .menu ul {
+    display: flex;
   }
 
   .menu ul {
