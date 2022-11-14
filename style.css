@@ -9,6 +9,9 @@
 }
 
 /* GENERAL STYLING */
+a {
+  text-decoration: none;
+}
 
 main {
   display: flex;
@@ -98,8 +101,17 @@ h4 {
 }
 
 .close {
-  display: none;
+  /* display: none; */
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  height: 40px;
+  width: 40px;
 }
+
+/* #barClose {
+  di
+} */
 
 .menu {
   display: flex;
