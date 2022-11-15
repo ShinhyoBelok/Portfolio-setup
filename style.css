@@ -255,6 +255,8 @@ ul {
   background: #e5e5e5;
 }
 
+/* start-detail-mode */
+
 .project {
   display: grid;
   background-color: #fff;
@@ -264,6 +266,48 @@ ul {
   padding: 1rem;
   gap: 12px;
 }
+
+.project.detailMode {
+  position: fixed;
+  top: 1%;
+  z-index: 1;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(193, 199, 208, 0.5);
+  backdrop-filter: blur(9.5px);
+}
+
+.GripOrder1 {
+  order: -1;
+}
+
+.GripOrder2 {
+  order: 2;
+}
+
+.close-btn-detail {
+  position: absolute;
+  top: 3%;
+  right: 24px;
+  justify-self: end;
+  border-style: none;
+  background: none;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+
+.btnSection {
+  justify-content: space-between;
+}
+
+/* end-detail-mode */
 
 .snap {
   justify-self: center;
