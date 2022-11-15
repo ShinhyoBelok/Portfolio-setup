@@ -24,3 +24,15 @@ navItems.forEach((navItem) => {
     closeMenu.classList.toggle('show');
   });
 });
+
+const modalContainer = document.querySelector('.detailMode')
+const seeProjectBtn = document.querySelector('.see-project-2')
+const closeDetailBtn = document.querySelector('.close-btn-detail')
+
+seeProjectBtn.addEventListener('click', () => {
+  modalContainer.style.display = 'block';
+});
+
+closeDetailBtn.addEventListener('click', () => {
+  modalContainer.style.display = 'none';
+});
