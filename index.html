@@ -51,8 +51,8 @@
         <section id="work">
             <!-- project 1 -->
             <section class="project" id="project-1">
-                <button class="close-btn-modal d-none-modal"><img src="img\Icon-Cancel-detailmode.svg" alt="X"/></button>
-                <img class="snap GripOrder2" src="img\Snapshoot Portfolio.svg" alt="First project card picture">
+                <!-- <button class="close-btn-modal d-none-modal"><img src="img\Icon-Cancel-detailmode.svg" alt="X"/></button> -->
+                <img class="snap" src="img\Snapshoot Portfolio.svg" alt="First project card picture">
                 <h2>Tonic</h2>
                 <section>
                     <ul class="canopy">
@@ -63,19 +63,16 @@
                         <li><span class="lightgray">2015</span></li>
                     </ul>
                 </section>
-                <p class="GripOrder2">
+                <p>
                     A daily selection of privately personalized
                     reads; no accounts or sign-ups required.
                 </p>
-                <ul class="programmingLanguages GripOrder2">
+                <ul class="programmingLanguages">
                     <li>html</li>
                     <li>css</li>
                     <li>javaScript</li>
                 </ul>
-                <section class="btnSection GripOrder2">
-                    <button class="button detail" id="see-project-1">See Project</button>
-                    <button class="button d-none-modal">See Source</button>
-                </section>
+                <button class="button detail" id="see-project-1">See Project</button>
             </section>
             <!-- project 2 -->
             <section class="project">
@@ -149,8 +146,45 @@
                     </ul>
                     <button class="button detail" id="see-project-4">See Project</button>
             </section>
+            <!-- start popup window -->
+            <section class="modal" id="popup-window">
+                <header>
+                    <h2>Tonic</h2>
+                    <button class="close-btn-modal"><img src="img\Icon-Cancel-detailmode.svg" alt="X"/></button>
+                </header>
+                <section>
+                    <ul class="canopy">
+                        <li>CANOPY</li>
+                        <li><img src="img\Counter.svg" alt="Dot icon"></li>
+                        <li><span class="lightgray">Back End Dev</span></li>
+                        <li><img src="img\Counter.svg" alt="Dot icon"></li>
+                        <li><span class="lightgray">2015</span></li>
+                    </ul>
+                </section>
+                <img class="snap" src="img\Snapshoot Portfolio.svg" alt="First project card picture">
+                <article class="modal-description">
+                    <div class="side">
+                        <p>
+                            A daily selection of privately personalized
+                            reads; no accounts or sign-ups required.
+                        </p>
+                    </div>
+                    <div class="side-description">
+                        <ul class="programmingLanguages">
+                            <li>html</li>
+                            <li>css</li>
+                            <li>javaScript</li>
+                        </ul>
+                        <section class="btnSection">
+                            <button class="button modal-btn">See live<img src="img\Icon - Export-btn.svg" alt="Export Icon"/></button>
+                            <button class="button modal-btn">See Source<img src="img\Icon -GitHub-btn.svg" alt="Github Icon"/></button>
+                        </section>
+                    </div>
+                </article>
+            </section>
+            <div class="modal" id="overlay"></div>
+            <!-- end popup window -->
         </section>
-        <div class="" id="overlay"></div>
         <section class="presentation" id="aboutContainer">
             <section class="content" id="about">
                 <h2 class="Title">About<br>Myself</h2>
@@ -211,6 +245,7 @@
             <button class="button">Get In Touch</button>
         </form>
     </section>
+
     <script src="./script.js"></script>
 </body>
 
