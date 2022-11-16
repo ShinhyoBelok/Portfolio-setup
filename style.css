@@ -264,30 +264,6 @@ ul {
   gap: 12px;
 }
 
-/* start-detail-mode */
-
-.d-none-modal {
-  display: none;
-}
-
-.project.modal {
-  transform: translate(0, 50px);
-  transition: 1s ease-in-out;
-  position: fixed;
-  top: -40px;
-  z-index: 1;
-}
-
-.modal#overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: rgba(193, 199, 208, 0.5);
-  backdrop-filter: blur(9.5px);
-}
-
 .contact h2 {
   font-size: 40px;
   line-height: 55px;
@@ -295,10 +271,6 @@ ul {
   margin: 0;
   align-self: unset;
   color: #fff;
-}
-
-.project.modal#project-1 h2 {
-  order: -1;
 }
 
 .canopy {
@@ -311,43 +283,10 @@ ul {
   align-self: center;
 }
 
-.project.modal#project-1 .canopy {
-  order: -1;
-}
-
-.project.modal#project-1 .GripOrder2 {
-  order: 2;
-}
-
-.project.modal#project-1 .close-btn-modal {
-  position: absolute;
-  top: 3%;
-  right: 24px;
-  justify-self: end;
-  border-style: none;
-  background: none;
-  cursor: pointer;
-  width: 24px;
-  height: 24px;
-}
-
-.project.modal#project-1 .btnSection {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-/* end-detail-mode */
-
 .snap {
   justify-self: center;
   align-self: center;
   width: 100%;
-  transition: transform 2s;
-}
-
-.snap:hover {
-  transform: scale(1.1);
 }
 
 .lightgray {
@@ -560,6 +499,79 @@ ul {
   color: #172b4d;
 }
 
+/* start modal style */
+
+.modal#popup-window {
+  align-self: center;
+  transform: scale(0);
+  transition: 0.9s;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  background-color: #fff;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  border-radius: 1rem;
+  padding: 1rem;
+  gap: 18px;
+  margin: 24px;
+  max-height: 95vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.modal header {
+  display: flex;
+}
+
+.modal#overlay {
+  transform: scale(0);
+  transition: 0.4s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(193, 199, 208, 0.5);
+  backdrop-filter: blur(9.5px);
+}
+
+.close-btn-modal {
+  position: absolute;
+  top: 3%;
+  right: 24px;
+  justify-self: end;
+  border-style: none;
+  background: none;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+
+.btnSection {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  border-top: 1px  solid #ebecf0;
+}
+
+.modal-btn {
+  display: flex;
+  gap: 5px;
+}
+
+.scaleOne {
+  transform: scale(1);
+  transition: 2s ease-in-out;
+}
+
+.modal .programmingLanguages {
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+
+/* end modal style */
 @media (min-width: 768px) {
   h1 {
     font-size: 48px;
@@ -669,4 +681,22 @@ ul {
     font-size: 48px;
     line-height: 60px;
   }
+
+  /* modal style */
+
+  .modal-description {
+    display: flex;
+    gap: 24px;
+  }
+
+  .side {
+    width: 67%;
+  }
+
+  .modal#popup-window {
+    margin-left: 9%;
+    margin-right: 9%;
+  }
+
+  /* end modal style */
 }
