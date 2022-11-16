@@ -25,14 +25,13 @@ navItems.forEach((navItem) => {
   });
 });
 
-const project1Container = document.getElementById('project-1');
+const popupContainer = document.getElementById('popup-window');
 const overlay = document.getElementById('overlay');
-const modalElement = document.querySelectorAll('.d-none-modal');
 const closeBtnModal = document.querySelector('.close-btn-modal');
-const title = document.querySelector('.project h2');
-const snap = document.querySelector('.project img.snap')
-const cardDescription = document.querySelector('.project p')
-const openBtn = document.querySelectorAll('.project .button.detail')
+const title = document.querySelector('.modal h2');
+const snap = document.querySelector('.modal img.snap');
+const cardDescription = document.querySelector('.modal p');
+const openBtn = document.querySelectorAll('.project .button.detail');
 const projects = [
   {
     name: 'Tonic',
@@ -44,7 +43,7 @@ const projects = [
       electronic typesetting, remaining essent`,
     image: 'img/Snapshoot Portfolio.svg',
     technologies: ['html', 'JavaScript', 'css'],
-    linkToLiveVersion : '#',
+    linkToLiveVersion: '#',
     linkToSource: '#',
   },
 
@@ -58,7 +57,7 @@ const projects = [
       electronic typesetting, remaining essent`,
     image: 'img/Snapshoot Portfolio 2.svg',
     technologies: ['html', 'JavaScript', 'css'],
-    linkToLiveVersion : '#',
+    linkToLiveVersion: '#',
     linkToSource: '#',
   },
 
@@ -72,7 +71,7 @@ const projects = [
       electronic typesetting, remaining essent`,
     image: 'img/Snapshoot Portfolio 3.svg',
     technologies: ['html', 'JavaScript', 'css'],
-    linkToLiveVersion : '#',
+    linkToLiveVersion: '#',
     linkToSource: '#',
   },
 
@@ -86,63 +85,31 @@ const projects = [
       electronic typesetting, remaining essent`,
     image: 'img/Snapshoot Portfolio 4.svg',
     technologies: ['html', 'JavaScript', 'css'],
-    linkToLiveVersion : '#',
+    linkToLiveVersion: '#',
     linkToSource: '#',
-  }
-]
-
-const originalContent = {
-  name: 'Tonic',
-  description: `A daily selection of privately personalized
-    reads; no accounts or sign-ups required.`,
-  technologies: ['html', 'JavaScript', 'css'],
-  image: 'img/Snapshoot Portfolio.svg',
-  linkToLiveVersion : '#',
-  linkToSource: '#',
-}
-
-
-function displayCard () {
-  project1Container.classList.add('modal');
-  overlay.classList.add('modal');
-  for (let i = 0; i < modalElement.length; i++) {
-    modalElement[i].classList.remove('d-none-modal');
-  }
-}
-
-function hideCard () {
-  project1Container.classList.remove('modal');
-  overlay.classList.remove('modal');
-  for (let i = 0; i < modalElement.length; i++) {
-    modalElement[i].classList.add('d-none-modal');
-  }
-}
+  },
+];
 
 function cardContent(event) {
-  let i = (event.slice(12))-1;
+  const i = (event.slice(12)) - 1;
   title.textContent = projects[i].name;
   snap.setAttribute('src', projects[i].image);
   cardDescription.textContent = projects[i].description;
 }
 
-function originalCard() {
-  title.textContent = originalContent.name;
-  snap.setAttribute('src', originalContent.image);
-  cardDescription.textContent = originalContent.description;
-}
-
-function elementEvent (element) {
-  element.addEventListener('click', () => {
-    displayCard();
+function elementEvent(element) {
+  element.addEventListener('click', (event) => {
+    popupContainer.style.transform = 'scale(1)';
+    overlay.style.transform = 'scale(1)';
     cardContent(event.target.id);
-  })
+  });
 }
 
-openBtn.forEach( element => {
+openBtn.forEach((element) => {
   elementEvent(element);
 });
 
 closeBtnModal.addEventListener('click', () => {
-  hideCard();
-  originalCard();
+  popupContainer.style.transform = 'scale(0)';
+  overlay.style.transform = 'scale(0)';
 });
