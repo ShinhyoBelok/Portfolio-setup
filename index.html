@@ -50,12 +50,12 @@
         </section>
         <section id="work">
             <!-- project 1 -->
-            <section class="project detailMode">
-                <button class="close-btn-detail"><img src="img\Icon-Cancel-detailmode.svg" alt="X"/></button>
+            <section class="project" id="project-1">
+                <button class="close-btn-modal d-none-modal"><img src="img\Icon-Cancel-detailmode.svg" alt="X"/></button>
                 <img class="snap GripOrder2" src="img\Snapshoot Portfolio.svg" alt="First project card picture">
-                <h2 class="GripOrder1">Tonic</h2>
+                <h2>Tonic</h2>
                 <section>
-                    <ul class="canopy GripOrder1">
+                    <ul class="canopy">
                         <li>CANOPY</li>
                         <li><img src="img\Counter.svg" alt="Dot icon"></li>
                         <li><span class="lightgray">Back End Dev</span></li>
@@ -73,8 +73,8 @@
                     <li>javaScript</li>
                 </ul>
                 <section class="btnSection GripOrder2">
-                    <button class="button">See Project</button>
-                    <button class="button">See Source</button>
+                    <button class="button detail" id="see-project-1">See Project</button>
+                    <button class="button d-none-modal">See Source</button>
                 </section>
             </section>
             <!-- project 2 -->
@@ -99,7 +99,7 @@
                         <li>css</li>
                         <li>javaScript</li>
                     </ul>
-                    <button class="button see-project-2">See Project</button>
+                    <button class="button detail" id="see-project-2">See Project</button>
             </section>
             <!-- project 3 -->
             <section class="project">
@@ -123,7 +123,7 @@
                         <li>css</li>
                         <li>javaScript</li>
                     </ul>
-                    <button class="button">See Project</button>
+                    <button class="button detail" id="see-project-3">See Project</button>
             </section>
             <!-- project 4 -->
             <section class="project">
@@ -147,10 +147,10 @@
                         <li>css</li>
                         <li>javaScript</li>
                     </ul>
-                    <button class="button see-project-1">See Project</button>
+                    <button class="button detail" id="see-project-4">See Project</button>
             </section>
         </section>
-        <div class="overlay"></div>
+        <div class="" id="overlay"></div>
         <section class="presentation" id="aboutContainer">
             <section class="content" id="about">
                 <h2 class="Title">About<br>Myself</h2>
