@@ -240,7 +240,7 @@ function hideError() {
 }
 
 submit.addEventListener('click', (event) => {
-  if (email.value != email.value.toLowerCase()) {
+  if (email.value !== email.value.toLowerCase()) {
     showError();
     event.preventDefault();
   } else {
