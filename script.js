@@ -225,3 +225,26 @@ closeBtnModal.addEventListener('click', () => {
   overlay.style.transform = 'scale(0)';
 });
 /* end dynamic modal */
+/* start lower case error */
+const email = document.getElementById('email');
+const submit = document.getElementById('submit');
+const emailError = document.querySelector('span.error');
+
+function showError() {
+  emailError.innerHTML = 'Kindly only use lower <br/>case for the Email';
+  emailError.classList.add('active');
+}
+
+function hideError() {
+  emailError.classList.remove('active');
+}
+
+submit.addEventListener('click', (event) => {
+  if (email.value != email.value.toLowerCase()) {
+    showError();
+    event.preventDefault();
+  } else {
+    hideError();
+  }
+});
+/* end lower case error */
