@@ -226,8 +226,7 @@ closeBtnModal.addEventListener('click', () => {
 });
 /* end dynamic modal */
 /* start lower case error */
-const email = document.getElementById('email');
-const submit = document.getElementById('submit');
+const form = document.querySelector('#contact-me-form');
 const emailError = document.querySelector('span.error');
 
 function showError() {
@@ -239,12 +238,24 @@ function hideError() {
   emailError.classList.remove('active');
 }
 
-submit.addEventListener('click', (event) => {
-  if (email.value !== email.value.toLowerCase()) {
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const email = form.email.value;
+  if (email !== email.toLowerCase()) {
     showError();
-    event.preventDefault();
+  } else {
+    hideError();
+    form.submit();
+  }
+});
+
+form.email.addEventListener('keyup', (event) => {
+  event.preventDefault();
+  if (event.target.value !== event.target.value.toLowerCase()) {
+    showError();
   } else {
     hideError();
   }
 });
+
 /* end lower case error */
