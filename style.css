@@ -577,9 +577,6 @@ ul {
   transform: scale(0);
   transition: 0.5s ease-in-out;
   width: fit-content;
-  position: relative;
-  left: 160px;
-  bottom: 65px;
   color: white;
   font-family: 'Poppins-normal', sans-serif;
   font-size: 13px;

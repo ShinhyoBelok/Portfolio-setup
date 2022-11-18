@@ -230,7 +230,7 @@ const form = document.querySelector('#contact-me-form');
 const emailError = document.querySelector('span.error');
 
 function showError() {
-  emailError.innerHTML = 'Kindly only use lower <br/>case for the Email';
+  emailError.innerHTML = 'Kindly only use lower case for the Email';
   emailError.classList.add('active');
 }
 
