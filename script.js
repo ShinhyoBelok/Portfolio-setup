@@ -227,14 +227,15 @@ closeBtnModal.addEventListener('click', () => {
 /* end dynamic modal */
 /* start lower case error */
 const form = document.querySelector('#contact-me-form');
-const emailError = document.querySelector('span.error');
+const emailError = document.querySelector('small.error');
 
 function showError() {
-  emailError.innerHTML = 'Kindly only use lower case for the Email';
+  emailError.textContent = 'Kindly only use lower case for the Email';
   emailError.classList.add('active');
 }
 
 function hideError() {
+  emailError.textContent = '';
   emailError.classList.remove('active');
 }
 

@@ -574,6 +574,7 @@ ul {
 /* end modal style */
 
 .error {
+  display: none;
   transform: scale(0);
   transition: 0.5s ease-in-out;
   width: fit-content;
@@ -583,10 +584,11 @@ ul {
   background-color: rgba(214, 23, 23, 0.877);
   border-radius: 5px;
   box-sizing: border-box;
-  padding: 0.3em;
+  padding: 0.2em;
 }
 
 .error.active {
+  display: block;
   transform: scale(1);
   transition: 0.5s ease-in-out;
 }
