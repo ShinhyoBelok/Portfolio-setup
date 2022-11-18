@@ -225,3 +225,38 @@ closeBtnModal.addEventListener('click', () => {
   overlay.style.transform = 'scale(0)';
 });
 /* end dynamic modal */
+/* start lower case error */
+const form = document.querySelector('#contact-me-form');
+const emailError = document.querySelector('small.error');
+
+function showError() {
+  emailError.textContent = 'Kindly only use lower case for the Email';
+  emailError.classList.add('active');
+}
+
+function hideError() {
+  emailError.textContent = '';
+  emailError.classList.remove('active');
+}
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const email = form.email.value;
+  if (email !== email.toLowerCase()) {
+    showError();
+  } else {
+    hideError();
+    form.submit();
+  }
+});
+
+form.email.addEventListener('keyup', (event) => {
+  event.preventDefault();
+  if (event.target.value !== event.target.value.toLowerCase()) {
+    showError();
+  } else {
+    hideError();
+  }
+});
+
+/* end lower case error */
