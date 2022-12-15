@@ -10,7 +10,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://shinhyobelok.github.io/Portfolio-setup-and-mobile-first/)
+[Live Demo Link](https://shinhyobelok.github.io/Portfolio-setup/)
 
 ## Authors
 
