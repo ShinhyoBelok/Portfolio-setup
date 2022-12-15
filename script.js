@@ -27,19 +27,16 @@ navItems.forEach((navItem) => {
 
 const projects = [
   {
-    name: 'Tonic',
-    description: `Lorem Ipsum is simply dummy text of the printing 
-      and typesetting industry. Lorem Ipsum has been the industry's 
-      standard dummy text ever since the 1500s, when an unknown printer 
-      took a galley of type and scrambled it to make a type specimen book. 
-      It has survived not only five centuries, but also the leap into 
-      electronic typesetting, remaining essent`,
-    resume: `A daily selection of privately personalized reads; 
-      no accounts or sign-ups required.`,
-    image: 'img/Snapshoot Portfolio.svg',
+    name: 'To-do list',
+    description: `I created a To-do list website with a really nice UX using 
+    webpack that let you create a list that is saved in the local storage of 
+    your browser, let you mark them as completed and let erase them`,
+    resume: `To do taks is a website that allows you to create a list of task 
+    that you want to save online.`,
+    image: 'img/todo-list.png',
     technologies: ['html', 'JavaScript', 'css'],
-    linkToLiveVersion: '#',
-    linkToSource: '#',
+    linkToLiveVersion: 'https://shinhyobelok.github.io/To-do-list/',
+    linkToSource: 'https://github.com/ShinhyoBelok/To-do-list',
     dot: 'img/Counter.svg',
     canopyli1: 'Back End Dev',
     canopyli2: '2015',
@@ -135,7 +132,7 @@ function createProgrammingLanguages(x) {
 
 for (let i = 0; i < projects.length; i += 1) {
   const projectCard = `
-    <section class="project" id="project-1">
+    <section class="project" id="project-${i}">
                   <img class="snap ${projects[i].contentDirection}" src="${projects[i].image}" alt="First project card picture">
                   <h2>${projects[i].name}</h2>
                   <section>
@@ -184,8 +181,8 @@ workSection.innerHTML += `
                 <li>javaScript</li>
             </ul>
             <section class="btnSection">
-                <button class="button modal-btn">See live<img src="img/Icon - Export-btn.svg" alt="Export Icon"/></button>
-                <button class="button modal-btn">See Source<img src="img/Icon -GitHub-btn.svg" alt="Github Icon"/></button>
+                <button class="button modal-btn"><a class="seeLive" href="">See live</a><img src="img/Icon - Export-btn.svg" alt="Export Icon"/></button>
+                <button class="button modal-btn"><a class="seeSource" href="">See Source</a><img src="img/Icon -GitHub-btn.svg" alt="Github Icon"/></button>
             </section>
         </div>
     </article>
@@ -200,12 +197,16 @@ const title = document.querySelector('.modal h2');
 const snap = document.querySelector('.modal img.snap');
 const cardDescription = document.querySelector('.modal p');
 const openBtn = document.querySelectorAll('.project .button.detail');
+const seeLive = document.querySelector('.seeLive');
+const seeSource = document.querySelector('.seeSource');
 
 function cardContent(event) {
   const i = (event.slice(12)) - 1;
   title.textContent = projects[i].name;
   snap.setAttribute('src', projects[i].image);
   cardDescription.textContent = projects[i].description;
+  seeLive.href = projects[i].linkToLiveVersion;
+  seeSource.href = projects[i].linkToSource;
 }
 
 function elementEvent(element) {
